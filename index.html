@@ -3,20 +3,66 @@
     <head>
         <meta charset="utf-8">
         <title>Project 1: personal web site</title>
-        <style>
-            .container {
-                display: grid;
-            }
-
-            #main-header {
-                grid-area: header;
-            }
-        </style>
+        <link rel="stylesheet" href="/lcsite.css">
     </head>
     <body>
         <div class="container">
-            <div id="main-header">
+            <div class="header">
                 <h1>Lindsay's site</h1>
+            </div>
+            <div class="navbar">
+                <span class="navcurrent"><a href="/index.html">Home</a></span>
+                <span class="navlinks"><a href="/projects.html">Projects</a></span>
+                <span class="navlinks"><a href="/finn.html">Finn</a></span>
+                <span class="navlinks"><a href="/contact.html">Contact</a></span>
+            </div>
+            <div class="content">
+                <div id="about-me">
+                    <p>I’m a grad student in Computer Science, in my second-to-last semester. I studied linguistics for undergrad. My student work in research involved some light coding and data analysis, and I loved those aspects of it so much that I eventually landed back in school to study Computer Science. My elective coursework has included Computer Systems, AI and Web Development, the absolute best class at Khoury College.</p>
+                    <p>Now I’m looking for a co-op where I can learn as much as possible about working in the world of tech, and hopefully contribute meaningfully to some projects while I’m there!</p>
+                </div>
+                <div id="education">
+                    <h2>Education</h2>
+                    <table>
+                        <tr>
+                           <th>Northeastern University</th>
+                           <th>Boston, MA</th>
+                        </tr>
+                        <tr>
+                           <td><strong>Candidate for MS in Computer Science</strong></td>
+                           <td>2022</td>
+                        </tr>
+                        <tr>
+                            <td>Graduate Certificate in Data Science</td>
+                            <td>2016</td>
+                        </tr>
+                        <tr>
+                            <td>BA in Linguistics & English, minor in East Asian Studies</td>
+                            <td>2014</td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="experience">
+                    <h2>Experience</h2>
+                    <table>
+                        <tr>
+                            <th>Northeastern University</th>
+                            <th>Jan 2015 - Nov 2020</th>
+                        </tr>
+                        <tr>
+                            <td>Assistant Director</td>
+                            <td>Office of Student Employment, Graduate Assistantships & Fellowships</td>
+                        </tr>
+                        <tr>
+                            <ul>
+                                <li>Developed electronic I-9 compliance procedures, including secure document collection and management; Section 2 processing and auditing schedule; and E-Verify report schedule for all student population I-9s (about 4,000 forms processed annually).</li>
+                                <li>Ensured visa compliance in employment procedures for ~2,000 active international students. This created opportunities for those on student visas to gain valuable work experience while maintaining their status.</li>
+                                <li>Managed a full-time direct report and a team of up to 15 student employees.</li>
+                                <li>Promoted from Compliance Specialist due to strong performance and leadership ability.</li>
+                            </ul>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
     </body>
