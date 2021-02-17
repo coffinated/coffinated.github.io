@@ -132,3 +132,14 @@ img {
     max-width: 80%;
     height: auto;
 }
+
+#contacts {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 72pt;
+}
+
+#contacts a:hover {
+    color: rgb(135, 35, 25);
+}
