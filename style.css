@@ -1,0 +1,134 @@
+@font-face {
+    font-family: "merriweather";
+    src: url("./fonts/Merriweather-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "merriweather";
+    src: url("./fonts/Merriweather-Bold.ttf") format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "raleway";
+    src: url("./fonts/Raleway-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "raleway";
+    src: url("./fonts/Raleway-Thin.ttf") format('truetype');
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: "raleway";
+    src: url("./fonts/Raleway-Bold.ttf") format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "raleway";
+    src: url("./fonts/Raleway-Italic.ttf") format('truetype');
+    font-style: italic;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas:
+        "head head"
+        "side main-content"
+    ;
+    margin: 3%;
+    height: 90vh;
+}
+
+html, body {
+    font-family: 'raleway', Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+    background-color: rgb(255, 225, 225);
+}
+
+.header {
+    color: rgb(18, 135, 134);
+    grid-area: head;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    grid-area: side;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.content, .header, .navbar {
+    margin: 20px;
+    padding: 10px;
+    background-color: white;
+}
+
+.content {
+    grid-area: main-content;
+    overflow: auto;
+}
+
+h1 {
+    font-family: 'merriweather', 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 30pt;
+}
+
+h2 {
+    font-family: 'merriweather', 'Times New Roman', Times, serif;
+    color:rgb(135, 35, 25);
+}
+
+a {
+    color:rgb(215, 140, 5);
+}
+
+.navbar .navcurrent, .navbar .navlinks {
+    font-family: 'merriweather', 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.navcurrent a {
+    color: rgb(18, 135, 134);
+}
+
+table {
+    width: 90%;
+    padding-top: 5px;
+}
+
+#proj-table {
+    width: 100%;
+}
+
+#proj-table tr:nth-child(odd) {
+    background-color: rgb(225, 225, 225);
+}
+
+.proj-title {
+    font-weight: bold;
+    color:rgb(18, 135, 134);
+}
+
+.proj-date {
+    font-style: italic;
+    font-size: 12pt;
+}
+
+th {
+    text-align: left;
+}
+
+img {
+    max-width: 80%;
+    height: auto;
+}

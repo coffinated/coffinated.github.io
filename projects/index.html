@@ -3,23 +3,50 @@
     <head>
         <meta charset="utf-8">
         <title>Project 1: projects</title>
-        <link rel="stylesheet" href="/lcsite.css">
+        <link rel="stylesheet" href="../style.css">
     </head>
     <body>
         <div class="container">
+            <div class="header">
+                <div>
+                    <h1>Lindsay Coffin</h1>
+                </div>
+                <div>
+                    CS grad student seeking Software Engineering co-op for July-December 2021
+                </div>
+            </div>
             <div class="navbar">
                 <span class="navlinks"><a href="../">Home</a></span>
                 <span class="navcurrent"><a href="../projects">Projects</a></span>
                 <span class="navlinks"><a href="../finn">Finn</a></span>
                 <span class="navlinks"><a href="../contact">Contact</a></span>
             </div>
-            <div class="header">
-                <h1>Projects</h1>
-            </div>
             <div class="content">
                 <div id="projects">
-                    <p>This will include some project descriptions, maybe a video of the Tetris AI project.</p>
-                    <!-- not sure yet -->
+                    <h2>Projects</h2>
+                    <p>These were all part of my degree program and thus completed at Northeastern Universty.</p>
+                    <table id="proj-table">
+                        <tr>
+                            <td><span class="proj-title">File System</span>
+                                <br><span class="proj-date">December 2020</span></td>
+                            <td>Built a simple file system with CRUD functionality using FUSE, written in C with a partner.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="proj-title">Tetris AI</span>
+                                <br><span class="proj-date">December 2020</span></td>
+                            <td>Adapted a pygame Tetris implementation in Python in a group of 3 and created 3 AI agents to play it.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="proj-title">Animation player</span>
+                                <br><span class="proj-date">April 2020</span></td>
+                            <td>Implemented a Java program with a partner that takes a text description of an animation (DSL) and renders it visually, with a GUI built using Java's Swing.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="proj-title">Child Language Acquisition Bayes Classifier</span>
+                                <br><span class="proj-date">August 2016</span></td>
+                            <td>Trained a Bayes classifier using R to determine a child's stage of langauge acquisition from a corpus of transcribed speech.</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
