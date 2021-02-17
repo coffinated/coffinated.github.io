@@ -12,6 +12,7 @@
 @font-face {
     font-family: "raleway";
     src: url("./fonts/Raleway-Regular.ttf") format('truetype');
+    font-weight: normal;
 }
 
 @font-face {
@@ -32,57 +33,135 @@
     font-style: italic;
 }
 
-.container {
-    display: grid;
-    grid-template-rows: auto 1fr;
-    grid-template-columns: 1fr 4fr;
-    grid-template-areas:
-        "head head"
-        "side main-content"
-    ;
-    margin: 3%;
-    height: 90vh;
+@media (min-width: 700px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-template-areas:
+            "side main-content"
+        ;
+        height: 95vh;
+    }
+    
+    html, body {
+        font-family: 'raleway', Arial, Helvetica, sans-serif;
+        font-size: 14pt;
+        font-weight: normal;
+        background-color: rgb(255, 225, 225);
+    }
+    
+    .sidebar {
+        grid-area: side;
+        display: grid;
+        grid-template-rows: auto 1fr;
+        grid-template-areas: 
+            "header"
+            "navbar"
+        ;
+    }
+    
+    .header {
+        color: rgb(18, 135, 134);
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items: center;
+        grid-area: header;
+    }
+    
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        grid-area: navbar;
+    }
+    
+    .content, .sidebar {
+        margin-top: 20px;
+        margin-left: 10px;
+        padding: 10px;
+        background-color: white;
+    }
+    
+    .content {
+        grid-area: main-content;
+        overflow: auto;
+    }
+    
+    h1 {
+        font-family: 'merriweather', 'Times New Roman', Times, serif;
+        font-weight: bold;
+        font-size: 30pt;
+    }
 }
 
-html, body {
-    font-family: 'raleway', Arial, Helvetica, sans-serif;
-    font-size: 14pt;
-    background-color: rgb(255, 225, 225);
-}
+@media (max-width: 699px) {
+    .container {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        grid-template-areas:
+            "side"
+            "main-content"
+        ;
+        height: 95vh;
+        width: 95vw;
+    }
+    
+    html, body {
+        font-family: 'raleway', Arial, Helvetica, sans-serif;
+        font-size: 12pt;
+        font-weight: normal;
+        background-color: rgb(255, 225, 225);
+    }
+    
+    .sidebar {
+        grid-area: side;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas: 
+            "header navbar"
+        ;
+    }
+    
+    .header {
+        color: rgb(18, 135, 134);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        grid-area: header;
+    }
 
-.header {
-    color: rgb(18, 135, 134);
-    grid-area: head;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    .tagline {
+        display: none;
+    }
+    
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        grid-area: navbar;
+    }
+    
+    .content, .sidebar {
+        margin-top: 20px;
+        margin-left: 10px;
+        padding: 10px;
+        background-color: white;
+    }
+    
+    .content {
+        grid-area: main-content;
+        overflow: auto;
+    }
+    
+    h1 {
+        font-family: 'merriweather', 'Times New Roman', Times, serif;
+        font-weight: bold;
+        font-size: 16pt;
+    }
 }
-
-.navbar {
-    grid-area: side;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.content, .header, .navbar {
-    margin: 20px;
-    padding: 10px;
-    background-color: white;
-}
-
-.content {
-    grid-area: main-content;
-    overflow: auto;
-}
-
-h1 {
-    font-family: 'merriweather', 'Times New Roman', Times, serif;
-    font-weight: bold;
-    font-size: 30pt;
-}
-
+    
 h2 {
     font-family: 'merriweather', 'Times New Roman', Times, serif;
     color:rgb(135, 35, 25);
@@ -102,16 +181,22 @@ a {
 }
 
 table {
-    width: 90%;
+    width: 100%;
     padding-top: 5px;
 }
 
-#proj-table {
-    width: 100%;
+.job-right {
+    text-align: right;
+}
+
+#proj-table th, #proj-table td {
+    vertical-align: top;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #proj-table tr:nth-child(odd) {
-    background-color: rgb(225, 225, 225);
+    background-color: rgb(235, 235, 235);
 }
 
 .proj-title {
